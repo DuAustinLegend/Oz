@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNG Chatbots</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PNG Logo" id="logo">
+    <h1>PNG Chatbots</h1>
+  </header>
+  <main>
+    <div id="chat-interface">
+      <textarea id="user-input" placeholder="Enter your query..."></textarea>
+      <button onclick="sendQuery('chatbot1')">Ask Chatbot 1</button>
+      <button onclick="sendQuery('chatbot2')">Ask Chatbot 2</button>
+    </div>
+    <div id="response-output"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+

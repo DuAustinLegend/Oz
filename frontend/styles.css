@@ -1,0 +1,36 @@
+body {
+    background-color: #000; /* Black */
+    color: #FFD700; /* Gold */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #FF0000; /* Red */
+    padding: 1em;
+  }
+  
+  #logo {
+    width: 100px;
+  }
+  
+  textarea {
+    width: 60%;
+    height: 50px;
+    margin: 1em 0;
+  }
+  
+  button {
+    background-color: #FF0000; /* Red */
+    color: #FFD700; /* Gold */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #FFD700;
+    color: #FF0000;
+  }
+  

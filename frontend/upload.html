@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload PDF for Knowledge Base</h1>
+        <form id="upload-form">
+            <input type="file" id="pdf-file" name="pdf" accept=".pdf" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="upload-status"></div>
+    </div>
+    <script>
+        document.getElementById("upload-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            const fileInput = document.getElementById("pdf-file");
+            formData.append("pdf", fileInput.files[0]);
+
+            try {
+                const response = await fetch("/api/upload", {
+                    method: "POST",
+                    body: formData,
+                });
+                const data = await response.json();
+                document.getElementById("upload-status").innerText = data.success
+                    ? "Upload successful!"
+                    : "Upload failed!";
+            } catch {
+                document.getElementById("upload-status").innerText = "An error occurred.";
+            }
+        });
+    </script>
+</body>
+</html>
