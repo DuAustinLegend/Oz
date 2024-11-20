@@ -8,18 +8,22 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="PNG Logo" id="logo">
+    <img src="papua_new_guinea_detail.png" alt="PNG Logo" id="logo">
     <h1>PNG Chatbots</h1>
   </header>
   <main>
     <div id="chat-interface">
       <textarea id="user-input" placeholder="Enter your query..."></textarea>
-      <button onclick="sendQuery('chatbot1')">Ask Chatbot 1</button>
-      <button onclick="sendQuery('chatbot2')">Ask Chatbot 2</button>
+      <div id="button-container">
+        <button onclick="sendQuery('chatbot1')">Ask Chatbot 1</button>
+        <button onclick="sendQuery('chatbot2')">Ask Chatbot 2</button>
+      </div>
     </div>
     <div id="response-output"></div>
   </main>
+  <footer>
+    <p>&copy; 2024 PNG Chatbots. All rights reserved.</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
-

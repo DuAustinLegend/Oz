@@ -1,36 +1,124 @@
+/* General Styling */
 body {
-    background-color: #000; /* Black */
-    color: #FFD700; /* Gold */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center;
+  background-color: #000; /* Black */
+  color: #FFD700; /* Gold */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Header Styling */
+header {
+  background-color: #FF0000; /* Red */
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+#logo {
+  width: 80px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  header {
-    background-color: #FF0000; /* Red */
-    padding: 1em;
+  50% {
+    transform: scale(1.1);
   }
-  
-  #logo {
-    width: 100px;
-  }
-  
-  textarea {
-    width: 60%;
-    height: 50px;
-    margin: 1em 0;
-  }
-  
-  button {
-    background-color: #FF0000; /* Red */
-    color: #FFD700; /* Gold */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #FFD700;
-    color: #FF0000;
-  }
+}
+
+h1 {
+  margin: 10px 0 0;
+  font-size: 2rem;
+}
+
+/* Main Content Styling */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chat-interface {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 80%;
+  height: 80px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  background-color: #111;
+  color: #FFD700;
+  font-size: 1rem;
+  resize: none;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+#button-container {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: #FF0000; /* Red */
+  color: #FFD700; /* Gold */
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: #FFD700;
+  color: #FF0000;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Response Output Styling */
+#response-output {
+  margin-top: 20px;
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  background-color: #111;
+  color: #FFD700;
+  text-align: left;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+  min-height: 50px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #111;
+  color: #FFD700;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(255, 215, 0, 0.5);
+  font-size: 0.9rem;
+}
+
   
